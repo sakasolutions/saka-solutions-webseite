@@ -649,20 +649,25 @@ header {
   .leistungen-grid-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 16px;
     padding-left: 16px;
     padding-right: 16px;
   }
-
+  
   .leistungen-grid {
-    flex-wrap: wrap;
-    justify-content: center;
-    width: auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: max-content;
   }
-
+  
   .leistung {
-    flex: 0 0 auto;
+    scroll-snap-align: start;
+    flex: 0 0 90vw; /* fast volle Breite */
+    box-sizing: border-box;
   }
-}
+  
 
 .slider-hint-mobile {
   display: none;
