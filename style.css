@@ -608,3 +608,39 @@ header {
   margin-bottom: 18px;
 }
 
+/* Horizontales Scroll-Verhalten auf Mobilgeräten */
+.leistungen-grid-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.leistungen-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  width: max-content;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.leistung {
+  scroll-snap-align: start;
+  flex: 0 0 280px;
+}
+
+/* Nur auf Desktop zurück zum alten Verhalten */
+@media (min-width: 769px) {
+  .leistungen-grid-wrapper {
+    overflow-x: unset;
+  }
+
+  .leistungen-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+  }
+
+  .leistung {
+    flex: 0 0 auto;
+  }
+}
