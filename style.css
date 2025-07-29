@@ -675,3 +675,16 @@ header {
   padding-left: 0;
   padding-right: 0;
 }
+
+/* Karussell-Fix 1: Volle Breite für den Swiper-Bereich erlauben */
+.leistungen .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Karussell-Fix 2: Breite der mobilen Karte definieren, damit sie zentriert werden kann */
+@media (max-width: 767px) {
+  .leistungen .swiper-slide {
+    width: 85%; /* Die Karte nimmt 85% der Bildschirmbreite ein */
+  }
+}
