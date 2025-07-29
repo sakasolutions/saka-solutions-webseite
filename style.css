@@ -669,3 +669,9 @@ header {
     display: none;
   }
 }
+
+/* Karussell-Fix: Seitlichen Abstand im Container aufheben */
+.leistungen .container {
+  padding-left: 0;
+  padding-right: 0;
+}
