@@ -644,16 +644,34 @@ header {
   flex: 0 0 280px;
 }
 
-/* Nur auf Desktop zurück zum alten Verhalten */
-@media (min-width: 769px) {
-  
-  
+/* === Swiper & Slide Setup === */
+.swiper-container {
+  padding-bottom: 30px;
+}
 
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 769px) {
+  .swiper-slide {
+    width: 30%;
+  }
+}
+
+/* === Swipe-Hinweis unten rechts (nur mobil) === */
 .slider-hint-mobile {
   display: none;
   text-align: right;
-  margin-top: -20px;
-  margin-right: 20px;
+  margin-top: -10px;
+  margin-right: 10px;
   font-size: 14px;
   color: #666;
   font-weight: 500;
@@ -685,12 +703,4 @@ header {
       transform: translateX(10px);
     }
   }
-}
-
-.swiper-container {
-  padding-bottom: 30px;
-}
-
-.swiper-slide {
-  width: auto;
 }

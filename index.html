@@ -137,45 +137,41 @@
     <section id="leistungen" class="leistungen">
       <div class="container">
         <h2>Unsere Leistungen</h2>
+    
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide leistung web" id="webseiten">...</div>
-            <div class="swiper-slide leistung stream" id="streamingbox">...</div>
-            <div class="swiper-slide leistung support" id="itsupport">...</div>
-            <div class="swiper-slide leistung beratung">...</div>
-            <div class="swiper-slide leistung automation">...</div>
-            <div class="swiper-slide leistung kurse">...</div>
-          </div>
-          <!-- Optional Navigation -->
-          <div class="swiper-pagination"></div>
-        </div>
-        
+            <!-- 1 -->
+            <div class="swiper-slide leistung web" id="webseiten">
+              <i class="fas fa-globe fa-2x icon"></i>
+              <h3>Professionelle Webseiten</h3>
+              <p>Individuelle Weblösungen für Unternehmen – mobilfreundlich, DSGVO-konform & SEO-optimiert.</p>
+              <ul class="features">
+                <li><i class="fas fa-check-circle icon-check"></i> Maßgeschneidertes Design ohne Baukastensystem</li>
+                <li><i class="fas fa-check-circle icon-check"></i> Google-optimiert & technisch sauber aufgebaut</li>
+                <li><i class="fas fa-check-circle icon-check"></i> Schnell, wartungsarm & mobil angepasst</li>
+                <li><i class="fas fa-check-circle icon-check"></i> Optional mit CMS oder statisch</li>
+              </ul>
+              <a href="#kontakt" class="btn btn-primary">Jetzt anfragen</a>
+            </div>
+    
+            <!-- 2 -->
+            <div class="swiper-slide leistung stream" id="streamingbox">
+              <i class="fas fa-tv fa-2x icon"></i>
+              <h3>StreamVibe Streamingbox</h3>
+              <p>Leistungsstarke Android-TV-Box – vorkonfiguriert, updatefähig & sofort einsatzbereit.</p>
+              <ul class="features">
+                <li><i class="fas fa-check-circle icon-check"></i> Inklusive Netflix, Prime & Co (Widevine L1, 4K)</li>
+                <li><i class="fas fa-check-circle icon-check"></i> Direkt eingerichtet & betriebsbereit geliefert</li>
+                <li><i class="fas fa-check-circle icon-check"></i> Updatefähig, zuverlässig & wartungsarm</li>
+                <li><i class="fas fa-check-circle icon-check"></i> Persönlicher Support bei Fragen</li>
+              </ul>
+              <a href="https://streamvibe.de" target="_blank" class="btn btn-primary">Zur Produktseite</a>
+            </div>
 
 
 
 
-          <div class="leistung stream" id="streamingbox">
-            <i class="fas fa-tv fa-2x icon"></i>
-            <h3>StreamVibe Streamingbox</h3>
-            <p>Leistungsstarke Android-TV-Box – vorkonfiguriert, updatefähig & sofort einsatzbereit.</p>
-            <br>
-            <ul class="features">
-              <li><i class="fas fa-check-circle icon-check"></i> Inklusive Netflix, Prime & Co (Widevine L1, 4K)</li>
-              <br>
-              <li><i class="fas fa-check-circle icon-check"></i> Direkt eingerichtet & betriebsbereit geliefert</li>
-              <br>
-              <li><i class="fas fa-check-circle icon-check"></i> Updatefähig, zuverlässig & wartungsarm</li>
-              <br>
-              <li><i class="fas fa-check-circle icon-check"></i> Persönlicher Support bei Fragen</li>
-              <br><br>
-            </ul>
-            <a href="https://streamvibe.de" target="_blank" class="btn btn-primary">Zur Produktseite</a>
-          </div>
-
-
-
-
-          <div class="leistung support" id="itsupport">
+          <div class="swiper-slide leistung support" id="itsupport">
             <i class="fas fa-tools fa-2x icon"></i>
             <h3>IT-Support</h3>
             <p>Computerhilfe vor Ort - Zuverlässiger IT-Service für Privat & Business in Giengen & Umgebung</p>
@@ -195,7 +191,7 @@
 
 
 
-          <div class="leistung beratung">
+          <div class="swiper-slide leistung beratung">
             <i class="fas fa-comments fa-2x icon"></i>
             <h3>Technik-Beratung</h3>
             <p>Individuelle Beratung für Geräte, WLAN, Smart-Home & Co – ehrlich, unabhängig & verständlich erklärt.</p>
@@ -215,7 +211,7 @@
 
 
 
-          <div class="leistung automation">
+          <div class="swiper-slide leistung automation">
             <i class="fas fa-arrows-rotate fa-2x icon"></i>
             <h3>Automatisierung</h3>
             <p>Digitale Abläufe mit Tools wie Zapier, Make & Co – für mehr Effizienz im Alltag & weniger manuelle
@@ -238,7 +234,7 @@
 
 
 
-          <div class="leistung kurse">
+          <div class="swiper-slide leistung kurse">
             <i class="fas fa-chalkboard-user fa-2x icon"></i>
             <h3>IT-Kurse</h3>
             <p>Einsteigerfreundliche Kurse zu Web, Technik & Sicherheit – als Workshop oder 1:1-Coaching.</p>
@@ -260,12 +256,15 @@
 
 
 
-        </div>
-      </div>
+        <!-- Pagination Dots -->
+      <div class="swiper-pagination"></div>
+    </div>
 
-      <div class="slider-hint-mobile">
-        <span class="hint-text">Swipe →</span>
-      </div>
+    <!-- Swipe-Hinweis für Mobil -->
+    <div class="slider-hint-mobile">
+      <span class="hint-text">Swipe →</span>
+    </div>
+  </div>
 
     </section>
 
