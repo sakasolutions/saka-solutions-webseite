@@ -656,9 +656,10 @@ header {
 .swiper-slide {
   scroll-snap-align: center;
   flex-shrink: 0;
-  width: 90%;
+  width: 100%;  /* statt 90% */
   box-sizing: border-box;
 }
+
 
 @media (min-width: 769px) {
   .swiper-slide {

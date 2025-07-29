@@ -519,21 +519,22 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1.05,
-    spaceBetween: 20,
-    centeredSlides: true,
-    loop: false,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    769: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: false,
     },
-    breakpoints: {
-      769: {
-        slidesPerView: 3,
-        centeredSlides: false,
-      },
-    },
-  });
+  },
+});
+
 </script>
 
 
