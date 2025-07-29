@@ -18,8 +18,7 @@ body {
 /* === Header === */
 
 header {
-  background-color: #0a1e40;
-  /* dunkles Navy */
+  background-color: #0a1e40; /* dunkles Navy */
   padding: 20px 0;
   color: white;
 }
@@ -28,8 +27,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  /* Wichtig für absolute Positionierung */
+  position: relative; /* Wichtig für absolute Positionierung */
 }
 
 
@@ -53,8 +51,7 @@ header {
 }
 
 .nav-list li a:hover {
-  color: #61a4f1;
-  /* hellblauer Hover-Effekt */
+  color: #61a4f1; /* hellblauer Hover-Effekt */
 }
 
 /* === Hero-Sektion === */
@@ -72,11 +69,9 @@ header {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -91,8 +86,7 @@ header {
 }
 
 .hero-content h1 span {
-  color: #61a4f1;
-  /* hellblau */
+  color: #61a4f1; /* hellblau */
 }
 
 .hero-content p {
@@ -169,7 +163,7 @@ header {
   padding: 30px;
   border-radius: 10px;
   width: 300px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.2s ease;
 }
 
@@ -178,27 +172,22 @@ header {
   background: linear-gradient(135deg, #93c5fd, #1f599b);
   color: white;
 }
-
 .leistung.stream {
   background: linear-gradient(135deg, #3daa86, #002318);
   color: white;
 }
-
 .leistung.support {
   background: linear-gradient(135deg, #cbf652, #56720a);
   color: white;
 }
-
 .leistung.beratung {
   background: linear-gradient(135deg, #fcb777, #96500f);
   color: white;
 }
-
 .leistung.automation {
   background: linear-gradient(135deg, #ff4747, #6d0a0a);
   color: white;
 }
-
 .leistung.kurse {
   background: linear-gradient(135deg, #480b0b, #480b0b);
   color: white;
@@ -268,7 +257,7 @@ header {
 .ueber-bild img {
   max-width: 100%;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* === Kontakt === */
@@ -329,8 +318,7 @@ header {
   padding: 60px 20px 30px;
   text-align: center;
   font-size: 14px;
-  border-top: 3px solid #1e3c72;
-  /* optional: Farb-Akzent */
+  border-top: 3px solid #1e3c72; /* optional: Farb-Akzent */
 }
 
 .footer-logo img {
@@ -425,11 +413,9 @@ header {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -467,7 +453,6 @@ header {
   margin-top: 2px;
   min-width: 16px;
 }
-
 .scroll-fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -516,7 +501,7 @@ header {
   padding: 40px;
   max-width: 500px;
   margin: 0 auto 40px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .preis-icon {
@@ -606,8 +591,7 @@ header {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
   max-width: 900px;
   margin: 0 auto;
-  text-align: left;
-  /* Links statt zentriert */
+  text-align: left; /* Links statt zentriert */
 }
 
 .region-box h2 {
@@ -624,84 +608,3 @@ header {
   margin-bottom: 18px;
 }
 
-/* Horizontales Scroll-Verhalten auf Mobilgeräten */
-.leistungen-grid-wrapper {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.leistungen-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: nowrap;
-  width: max-content;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 20px;
-}
-
-.leistung {
-  scroll-snap-align: start;
-  flex: 0 0 280px;
-}
-
-/* === Swiper & Slide Setup === */
-.swiper-container {
-  padding-bottom: 30px;
-}
-
-.swiper-wrapper {
-  display: flex;
-}
-
-.swiper-slide {
-  scroll-snap-align: center;
-  flex-shrink: 0;
-  width: 100%;  /* statt 90% */
-  box-sizing: border-box;
-}
-
-
-@media (min-width: 769px) {
-  .swiper-slide {
-    width: 30%;
-  }
-}
-
-/* === Swipe-Hinweis unten rechts (nur mobil) === */
-.slider-hint-mobile {
-  display: none;
-  text-align: right;
-  margin-top: -10px;
-  margin-right: 10px;
-  font-size: 14px;
-  color: #666;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .slider-hint-mobile {
-    display: block;
-  }
-
-  .slider-hint-mobile .hint-text::after {
-    content: " →";
-    animation: slide-arrow 1s infinite;
-  }
-
-  @keyframes slide-arrow {
-    0% {
-      opacity: 0;
-      transform: translateX(0);
-    }
-
-    50% {
-      opacity: 1;
-      transform: translateX(5px);
-    }
-
-    100% {
-      opacity: 0;
-      transform: translateX(10px);
-    }
-  }
-}
