@@ -151,12 +151,6 @@ header {
   color: #0a1e40;
 }
 
-.leistungen-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
 
 .leistung {
   background-color: #f0f4fa;
@@ -608,3 +602,70 @@ header {
   margin-bottom: 18px;
 }
 
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  width: 320px; /* Breite der Karten anpassen */
+}
+
+/* =================================== */
+/* === Finales Swiper-Karussell CSS === */
+/* =================================== */
+
+.swiper {
+  width: 100%;
+  /* Padding oben/unten, damit die Pfeile und Schatten Platz haben */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  /* Breite der einzelnen Karten. 'auto' im JS sorgt für Flexibilität */
+  width: 320px;
+  /* Stellt sicher, dass alle Slides die gleiche Höhe haben, falls der Inhalt variiert */
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.leistung {
+    height: 100%; /* Die Karte soll die volle Höhe des Slides einnehmen */
+}
+
+/* Basis-Styling für beide modernen Pfeile */
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgba(10, 30, 64, 0.8); /* Dunkelblau mit Transparenz */
+  color: #ffffff !important; /* Wichtig, um die Standardfarbe zu überschreiben */
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%; /* Macht die Pfeile rund */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover-Effekt für die Pfeile */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #0a1e40; /* Volles Dunkelblau beim Hover */
+  transform: scale(1.1); /* Leichte Vergrößerung beim Hover */
+}
+
+/* Größe der Pfeil-Icons anpassen */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px !important;
+  font-weight: 900;
+}
+
+/* Auf mobilen Geräten Pfeile ausblenden, da Swipen Standard ist */
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
