@@ -498,38 +498,40 @@
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-<script>
-  const swiper = new Swiper('.swiper', {
-
-    
-    // Sorgt dafür, dass man mit der Maus "greifen" und ziehen kann (Desktop)
-    grabCursor: true,
-
-    // Wie viele Slides sind sichtbar? 'auto' passt sich an die Breite an.
-    slidesPerView: 'auto',
-    spaceBetween: 30, // Abstand zwischen den Karten
-
-    // Navigation mit den Pfeilen
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    // Responsive Anpassungen für verschiedene Bildschirmgrößen
-    breakpoints: {
-      // Ab 768px Breite werden 2 Slides angezeigt
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 40
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // ===================================
+      // MOBILE EINSTELLUNGEN (Standard)
+      // ===================================
+      slidesPerView: 1,       // Auf dem Handy wird EINE Karte angezeigt
+      spaceBetween: 20,       // Ein kleiner Abstand
+      centeredSlides: true,   // Die EINE Karte wird perfekt zentriert
+      grabCursor: true,
+  
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
-      // Ab 1200px Breite werden 3 Slides angezeigt
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 40
+  
+      // ===============================================
+      // ANPASSUNGEN FÜR GRÖSSERE BILDSCHIRME (Desktop)
+      // ===============================================
+      breakpoints: {
+        // Ab 768px Breite (Tablet-Ansicht)
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+          centeredSlides: false, // WICHTIG: Zentrierung wird hier aufgehoben
+        },
+        // Ab 1200px Breite (Deine ursprüngliche Desktop-Ansicht)
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+          centeredSlides: false, // WICHTIG: Zentrierung wird hier ebenfalls aufgehoben
+        }
       }
-    }
-  });
-</script>
+    });
+  </script>
 </body>
 </html>
 
