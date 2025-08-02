@@ -57,14 +57,28 @@ header {
 /* === Hero-Sektion === */
 
 .hero {
-  background: linear-gradient(-45deg, #77adff, #1f4f97, #1f4f97, #77adff) !important;
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
   color: white;
   padding: 100px 0;
   text-align: center;
+  position: relative; /* Wichtig für die Positionierung der Ebenen */
+  overflow: hidden;   /* Verhindert, dass etwas unerwünscht überlappt */
 }
 
+/* NEU: Der animierte Hintergrund wird in ein separates Pseudo-Element ausgelagert */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #77adff, #1f4f97, #1f4f97, #77adff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: -2; /* Liegt auf der untersten Ebene */
+}
+
+/* Die Keyframes-Animation für den Hintergrund bleibt unverändert */
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -77,8 +91,21 @@ header {
   }
 }
 
+/* Der Partikel-Container liegt eine Ebene über dem Hintergrund */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Liegt zwischen Hintergrund und Inhalt */
+}
 
-
+/* Der Text-Inhalt liegt auf der obersten Ebene */
+.hero-content {
+  position: relative; 
+  /* z-index: 1; ist nicht mehr nötig, da es standardmäßig über den negativen z-index Ebenen liegt */
+}
 
 .hero-content h1 {
   font-size: 42px;
@@ -129,13 +156,6 @@ header {
 
 .btn-secondary:hover {
   background-color: #e0eafc;
-}
-
-
-
-/* Aktivieren bei Hover */
-.nav-list li.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 /* === Leistungen === */
@@ -399,6 +419,11 @@ header {
 
   .nav-list li a {
     color: white;
+  }
+  
+  /* NEU: HIER KOMMT DIE REGEL FÜR DAS PORTFOLIO HIN */
+  .portfolio-card {
+    flex-basis: 100%; /* Jede Karte nimmt die volle Breite ein */
   }
 }
 
@@ -697,3 +722,83 @@ header {
     width: 85%; /* Die Karte nimmt 85% der Bildschirmbreite ein */
   }
 }
+
+
+/* ============================ */
+/* PORTFOLIO SEKTION            */
+/* ============================ */
+#portfolio {
+  padding: 100px 0;
+  background-color: #f8f9fa; /* Selber Hintergrund wie Speisekarte für Abwechslung */
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.portfolio-card {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  overflow: hidden;
+  flex-basis: 350px; /* Etwas breiter als die Menü-Karten */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.portfolio-image {
+  position: relative; /* Wichtig für den Overlay-Effekt */
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 94, 175, 0.85); /* Dein Blau mit Transparenz */
+  
+  /* Overlay zentrieren */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  opacity: 0; /* Standardmäßig unsichtbar */
+  transition: opacity 0.4s ease;
+}
+
+/* Overlay beim Hovern über die Karte einblenden */
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-content {
+  padding: 25px;
+  text-align: center;
+}
+
+.portfolio-content h3 {
+  font-size: 1.4rem;
+  color: var(--dark-text-color);
+  margin-bottom: 5px;
+}
+
+.portfolio-content p {
+  color: #666;
+  font-size: 0.9rem;
+}
+

@@ -93,6 +93,8 @@
 
   <main>
     <section class="hero">
+      <div id="particles-js"></div>
+    
       <div class="container hero-content">
         <h1>Technik, die funktioniert.<br><span>Lösungen, die helfen.</span></h1>
         <p>Web & Technik – auf Augenhöhe.</p>
@@ -322,6 +324,8 @@
     
     
 
+
+
     <section id="kontakt" class="kontakt">
       <div class="container kontakt-container">
         <h2>Kontakt aufnehmen</h2>
@@ -532,6 +536,66 @@
       }
     });
   </script>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80, // Anzahl der Partikel
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff" // Farbe der Partikel
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.5, // Transparenz
+          "random": false
+        },
+        "size": {
+          "value": 3, // Größe der Partikel
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1, // Geschwindigkeit der Bewegung
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": false, // Keine Interaktion bei Hover
+          },
+          "onclick": {
+            "enable": false, // Keine Interaktion bei Klick
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+
+</body>
+</html>
 
 </body>
 </html>
