@@ -802,3 +802,13 @@ header {
   font-size: 0.9rem;
 }
 
+/* Korrektur für die Checkliste im "Region Service"-Block */
+
+.region-box .features li {
+  color: #333; /* Setzt die Schriftfarbe für den Text auf dunkelgrau */
+  margin-bottom: 8px; /* Fügt den Abstand wieder hinzu */
+}
+
+.region-box .features .icon-check {
+  color: #1f599b; /* Setzt die Icon-Farbe auf dunkelblau */
+}
