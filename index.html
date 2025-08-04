@@ -16,6 +16,9 @@
     <meta property="og:url" content="https://www.saka-it.de/">
     <meta property="og:type" content="website">
 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -610,6 +613,39 @@
       "retina_detect": true
     });
   </script>
+
+
+</script>
+
+<script>
+  window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+          "palette": {
+              "popup": {
+                  "background": "#0a1e40", // Dein dunkles Navy
+                  "text": "#ffffff"      // Heller Text
+              },
+              "button": {
+                  "background": "#61a4f1", // Dein Hellblau
+                  "text": "#0a1e40"      // Dunkler Text auf dem Button
+              }
+          },
+          "theme": "classic",
+          "position": "bottom-right",
+          "type": "opt-in",   // Nutzer muss aktiv zustimmen
+          "content": {
+              "message": "Diese Webseite verwendet zur Bereitstellung der Dienste (z.B. Kontaktformular, Schriftarten) externe Anbieter. Mit Ihrer Zustimmung erlauben Sie die Übermittlung von Daten an diese Drittanbieter.",
+              "dismiss": "Nur Notwendige",
+              "allow": "Alle akzeptieren",
+              "link": "Mehr erfahren",
+              "href": "datenschutz.html" // Link zu deiner Datenschutzseite
+          }
+      })
+  });
+</script>
+
+</body>
+</html>
 
 </body>
 </html>

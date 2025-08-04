@@ -812,3 +812,12 @@ header {
 .region-box .features .icon-check {
   color: #1f599b; /* Setzt die Icon-Farbe auf dunkelblau */
 }
+
+
+/* ========================================= */
+/* ANPASSUNG FÜR COOKIE CONSENT TAB (KONTRAST) */
+/* ========================================= */
+.cc-revoke {
+  background-color: #61a4f1 !important; /* Dein Hellblau für starken Kontrast */
+  border: 2px solid #ffffff;           /* Ein feiner weißer Rand für noch bessere Sichtbarkeit */
+}
