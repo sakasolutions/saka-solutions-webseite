@@ -17,8 +17,7 @@
     <meta property="og:type" content="website">
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -81,16 +80,14 @@
         <img src="assets/logo_white_no_bg.png" alt="Saka Solutions - IT & Sales Logo - Ihr IT-Dienstleister in Giengen">
       </div>
   
-      <!-- HAMBURGER BUTTON HIER -->
       <div class="menu-toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
   
-      <!-- NAVIGATION -->
       <nav>
-        <ul class="nav-list">
+        <ul class="nav-list" id="nav-list">
           <li><a href="#leistungen">Leistungen</a></li>
           <li><a href="#ueber">Über mich</a></li>
           <li><a href="#preise">Preise</a></li>
@@ -99,6 +96,7 @@
       </nav>
     </div>
   </header>
+  
   
 
   <main>
@@ -280,7 +278,7 @@
     </section>
     
 
-    <section class="ueber-mich scroll-fade-in">
+    <section id="ueber" class="ueber-mich scroll-fade-in">
       <div class="container ueber-content">
         <div class="ueber-bild">
           <img src="assets/sinan.PNG" alt="Sinan Sakacilar - Inhaber von Saka Solutions - IT & Sales, Ihrem IT-Service in Giengen">
@@ -436,26 +434,19 @@
     
 
   </main>
-
   <script>
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navList = document.querySelector('.nav-list');
-    const navLinks = document.querySelectorAll('.nav-list a');
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("mobile-menu");
+      const navList = document.getElementById("nav-list");
   
-    mobileMenu.addEventListener('click', () => {
-      navList.classList.toggle('active');
-      mobileMenu.classList.toggle('open');
-    });
-  
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (navList.classList.contains('active')) {
-          navList.classList.remove('active');
-          mobileMenu.classList.remove('open');
-        }
+      menuToggle.addEventListener("click", function () {
+        navList.classList.toggle("active");
       });
     });
   </script>
+  
+  
+  
   
   <script>
     const observer = new IntersectionObserver((entries) => {
@@ -647,8 +638,7 @@
 </body>
 </html>
 
-</body>
-</html>
+
 
 
 

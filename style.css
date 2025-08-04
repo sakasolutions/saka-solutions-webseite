@@ -397,21 +397,25 @@ header {
     display: flex;
   }
 
-  .nav-list {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: #0a1e40;
-    flex-direction: column;
-    gap: 0;
-    width: 200px;
-    display: none;
-    border-radius: 5px;
+  @media (max-width: 768px) {
+    .nav-list {
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background-color: #0a1e40;
+      flex-direction: column;
+      gap: 0;
+      width: 200px;
+      display: none;
+      border-radius: 5px;
+      z-index: 10000; /* NEU: über dem Cookie-Banner */
+    }
+  
+    .nav-list.active {
+      display: flex;
+    }
   }
-
-  .nav-list.active {
-    display: flex;
-  }
+  
 
   .nav-list li {
     padding: 15px 20px;
